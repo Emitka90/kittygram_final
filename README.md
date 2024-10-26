@@ -1,5 +1,4 @@
-![workflow_status]
-(https://github.com/emitka90/kittygram_final/actions/workflows/main.yml/badge.svg)
+![workflow_status](https://github.com/emitka90/kittygram_final/actions/workflows/main.yml/badge.svg)
 
 # __Kittygram__
 
@@ -22,24 +21,39 @@
 
 Клонируем репозиторий:
 
-'''git@github.com:Emitka90/kittygram_final.git'''
+```bash
+git@github.com:Emitka90/kittygram_final.git
+```
 
 Запускаем Docker Compose:
 
-'''sudo docker compose -f docker-compose.production.yml up -d'''
+```bash
+sudo docker compose -f docker-compose.production.yml up -d
+```
 
 Выполняем миграции, собераем статические файлы бэкенда и копируем их в /backend_static/static/:
 
-'''sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate'''
-'''sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic'''
-'''sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/'''
+```bash
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+```
+```bash
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
+```
+```bash
+sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/
+```
 
 ## Пример заполнения файла __.env__
 
-'''POSTGRES_DB=kittygram
+```bash
+POSTGRES_DB=kittygram
 POSTGRES_USER=kittygram_user
 POSTGRES_PASSWORD=kittygram_password
 DB_NAME=kittygram
 DB_HOST=db
 DEBUG=False
-SECRET_KEY=django_secret_key_example'''
+SECRET_KEY=django_secret_key_example
+```
+
+## Автор
+*Эмин Мамедов*
