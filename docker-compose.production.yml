@@ -14,6 +14,8 @@ services:
   backend:
     image: emitka90/kittygram_backend
     env_file: .env
+    depends_on:
+      - db
     volumes:
       - static:/backend_static
       - media:/app/media
@@ -28,6 +30,9 @@ services:
   gateway:
     image: emitka90/kittygram_gateway
     env_file: .env
+    depends_on:
+      - frontend
+      - backend
     ports:
       - 9000:80
     volumes:
