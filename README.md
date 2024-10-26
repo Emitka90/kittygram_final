@@ -1,5 +1,4 @@
-![workflow_status]
-(https://github.com/emitka90/kittygram_final/actions/workflows/main.yml/badge.svg)
+![workflow_status](https://github.com/emitka90/kittygram_final/actions/workflows/main.yml/badge.svg)
 
 # __Kittygram__
 
