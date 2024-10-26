@@ -22,7 +22,7 @@
 
 Клонируем репозиторий:
 
-git@github.com:Emitka90/kittygram_final.git
+>git@github.com:Emitka90/kittygram_final.git
 
 Запускаем Docker Compose:
 
